@@ -5,7 +5,7 @@
   在 Node.js 8.0.0 之前，分配给这种 `Buffer` 实例的内存是**没有**初始化的，且**可能包含敏感数据**。
   这种 `Buffer` 实例随后必须被初始化，可以使用 [`buf.fill(0)`] 或写满这个 `Buffer`。
   虽然这种行为是为了提高性能而**有意为之的**，但开发经验表明，创建一个快速但未初始化的 `Buffer` 与创建一个慢点但更安全的 `Buffer` 之间需要有更明确的区分。
-  Starting in Node.js 8.0.0,
+  从 Node.js 8.0.0开始,
   `Buffer(num)` and `new Buffer(num)` will return a `Buffer` with initialized
   memory.
 * 传一个字符串、数组、或 `Buffer` 作为第一个参数，则将所传对象的数据拷贝到 `Buffer` 中。
