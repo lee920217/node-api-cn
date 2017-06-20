@@ -9,7 +9,7 @@
   `Buffer(num)` and `new Buffer(num)` will return a `Buffer` with initialized
   memory.
 * 传一个字符串、数组、或 `Buffer` 作为第一个参数，则将所传对象的数据拷贝到 `Buffer` 中。
-* 传入一个 [`ArrayBuffer`]，则返回一个与给定的 [`ArrayBuffer`] 共享所分配内存的 `Buffer`。
+* 传入一个 [`ArrayBuffer`]，返回一个 `Buffer`与传入的[`ArrayBuffer`]分享其对应的内存。
 
 因为 `new Buffer()` 的行为会根据所传入的第一个参数的值的数据类型而明显地改变，所以如果应用程序没有正确地校验传给 `new Buffer()` 的参数、或未能正确地初始化新分配的 `Buffer` 的内容，就有可能在无意中为他们的代码引入安全性与可靠性问题。
 
